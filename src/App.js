@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React  from 'react'
+import Paper from '@material-ui/core/Paper'
+import Divider from '@material-ui/core/Divider';
+import { makeStyles } from '@material-ui/core/styles'
+import NavBar from './components/NavBar'
+import Buttons from './components/Buttons'
+import Cards from './components/Cards'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const useStyles = makeStyles((theme) => ({
+  paperStyle:{
+    backgroundColor: 'white'
+  },
+  bodydividerStyle:{
+    backgroundColor: 'gray',
+    height: 2,
+    margin: theme.spacing(6)
+  }
+}));
+
+export default function App() {
+  const classes = useStyles();
+    return (
+      <Paper >
+       <div>
+         <NavBar/>
+         < Buttons/>
+         <Divider className={classes.bodydividerStyle} variant="middle" />
+         <Cards/>
+       </div>
+      </Paper>
+    )
 }
-
-export default App;
