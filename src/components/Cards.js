@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   cardStyles:{
     fontFamily: "Roboto",
     paddingBottom: 15,
-    backgroundColor: '#e0f7fa',
+    backgroundColor: '#EFF2F4',
     borderRadius: 20,
   },
   typoStyles:{

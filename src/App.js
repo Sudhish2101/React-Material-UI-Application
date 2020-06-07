@@ -8,7 +8,7 @@ import Cards from './components/Cards'
 
 const useStyles = makeStyles((theme) => ({
   paperStyle:{
-    backgroundColor: 'white'
+    backgroundColor: '#ECF0F3'
   },
   bodydividerStyle:{
     backgroundColor: 'gray',
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 export default function App() {
   const classes = useStyles();
     return (
-      <Paper >
+      <Paper className={classes.paperStyle}>
        <div>
          <NavBar/>
          < Buttons/>
