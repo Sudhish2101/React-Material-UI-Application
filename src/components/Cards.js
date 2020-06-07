@@ -7,10 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles'
-import { IconButton } from '@material-ui/core'
-import Divider from '@material-ui/core/Divider';
-import PlayCircleFilledWhiteIcon from '@material-ui/icons/PlayCircleFilledWhite';
-import GetAppIcon from '@material-ui/icons/GetApp';
+import Divider from '@material-ui/core/Divider'
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
@@ -18,29 +15,68 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(4),
   },
   cardStyles:{
-    fontFamily: "Roboto",
-    paddingBottom: 15,
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 4,
     backgroundColor: '#EFF2F4',
-    borderRadius: 20,
+    borderRadius: 20
+  },
+  cardStyles1:{
+    fontSize: "1.4rem",
+    paddingLeft: 4,
+    fontFamily: "Arial",
+    color: '#31456A',
+    fontWeight: "bold"
+  },
+  cardStyles2:{
+    fontSize: "1.4rem",
+    paddingLeft: 4,
+    fontFamily: "Arial",
+    color: '#31456A',
+    fontWeight: "bold",
+    paddingBottom: 12
   },
   typoStyles:{
-    color: 'green',
-    margin: theme.spacing(2)   
+    color: '#08C5A7',
+    margin: theme.spacing(0.5),
+    fontSize: "1.15rem",
+    fontWeight: 500
   },
   carddividerStyle:{
-    backgroundColor: 'green',
+    backgroundColor: '#08C5A7',
     height: 3,
     borderRadius: 3,
-    width: 75
+    width: 60,
+  },
+  paddingStyle1:{
+    paddingTop: 25,
+    paddingBottom: 15,
+  },
+  paddingStyle3:{
+    paddingLeft: 5
+  },
+  paddingStyle4:{
+    paddingLeft: 45
   },
   typoStyle:{
-    margin: theme.spacing(0.75)
+    margin: theme.spacing(0.75),
+    color: '#31456A',
+    fontWeight: 500
+  },
+  root: {
+    justifyContent: 'center',
+    paddingBottom: 20
   },
   cardactionStyles:{
-    borderRadius: 10,
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-    marginLeft: 20,
-    marginRight: 50
+    borderRadius: 15,
+    fontSize: "1.1rem",
+    fontWeight: 600,
+    color: '#FFFFFF',
+    backgroundColor: '#08C5A7',
+    paddingLeft: 70,
+    paddingRight: 70,
+    paddingTop: 12,
+    paddingBottom: 12,
   }
 }));
 
@@ -55,27 +91,51 @@ const Cards = () => {
           <Grid item key={card} xs={12} sm={6} md={4}>
             <Card className={classes.cardStyles}>
               <CardContent >
-                <Typography className={classes.cardStyles} gutterBottom variant="h5" align="center">
-                  Representing Square Roots Of Decimal Numbers
+                <Typography className={classes.cardStyles1} gutterBottom variant="h5" >
+                  Representing Square
                 </Typography>
-                <Divider className={classes.carddividerStyle} variant="middle" />
-                <Typography className={classes.typoStyles} variant="body1">
-                  Type: Jee Advance
+                <Typography className={classes.cardStyles2} gutterBottom variant="h5" align="center" noWrap>
+                  Roots Of Decimal Numbers
                 </Typography>
-                <Typography className={classes.typoStyle} variant="body2"> 
-                Available from: 01.05.2020
+                <div className={classes.paddingStyle3}>
+                <Divider className={classes.carddividerStyle} variant="fullWidth" />
+                
+                <div className={classes.paddingStyle1}>
+                <Typography color="textSecondary" variant="body2" display="inline">
+                  Type:    
                 </Typography>
-                <Typography className={classes.typoStyle} variant="body2">
-                  Ends on: 01.11.2020
+                <Typography className={classes.typoStyles} variant="body1" display="inline">
+                  Jee Mains     
                 </Typography>
+                <Typography className={classes.paddingStyle4} color="textSecondary" variant="body2" display="inline">
+                  Paper:
+                </Typography>
+                <Typography className={classes.typoStyles} variant="body1" display="inline">
+                  1
+                </Typography>
+                </div>
+                <div>
+                <Typography variant="body2" color="textSecondary" display="inline"> 
+                  Available from:
+                </Typography>
+                <Typography className={classes.typoStyle} variant="body2" color="textSecondary" display="inline"> 
+                  01.05.2020 
+                </Typography>
+                </div>
+                <div>
+                <Typography variant="body2" color="textSecondary" display="inline">
+                  Ends on: 
+                </Typography>
+                <Typography className={classes.typoStyle} variant="body2" color="textSecondary" display="inline"> 
+                  01.11.2020
+                </Typography>
+                </div>
+                </div>
               </CardContent>
-              <CardActions >
-                <Button className={classes.cardactionStyles} variant="contained" size="large" color="secondary" endIcon={<PlayCircleFilledWhiteIcon>Start</PlayCircleFilledWhiteIcon>}>
+              <CardActions className={classes.root}>
+                <Button className={classes.cardactionStyles} variant="contained" size="large" >
                   Start
                 </Button>
-                <IconButton>
-                <GetAppIcon color="secondary"/>
-                </IconButton>
               </CardActions>
             </Card>
           </Grid>

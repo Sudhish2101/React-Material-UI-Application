@@ -3,10 +3,15 @@ import green from '@material-ui/core/colors/green';
 import blue from '@material-ui/core/colors/blue';
 
 const theme = createMuiTheme({
+  typography: {
+    button: {
+      textTransform: 'none'
+    }
+  },
   palette: {
     primary: blue,
     secondary: green,
-    //type: 'dark'
+    contrastText: '#fff',
   }
 });
 
