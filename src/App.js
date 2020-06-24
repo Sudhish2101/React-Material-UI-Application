@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'gray',
     height: 2,
     margin: theme.spacing(6)
+  },
+  colorStyle:{
+    backgroundColor: '#ECF0F3',
   }
 }));
 

@@ -4,6 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
 
+
 const useStyles = makeStyles((theme) => ({
     navbarStyle:{
       fontStyle: 'oblique',
@@ -15,13 +16,11 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: "bold",
       paddingTop: 20
     },
-    icon: {
-      marginRight: theme.spacing(0)
-    },
     subtitleStyle:{
       fontFamily: "Roboto",
       paddingBottom: 20
-    }
+    },
+    
 }));    
 
 const NavBar = () => {
@@ -38,6 +37,7 @@ const NavBar = () => {
         <Typography className={classes.titleStyle} variant="h3" align="center" color="secondary" gutterBottom>
               What do You Want to Learn Today?
         </Typography>
+        
         <Typography className={classes.subtitleStyle} variant="h5" align="center" color="textSecondary" gutterBottom>
               Select course type to continue
         </Typography>
