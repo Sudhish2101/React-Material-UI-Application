@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).   
+
+**Deployed URL**: "https://awesome-noyce-b3b912.netlify.app/"
 
 ## Available Scripts
 
